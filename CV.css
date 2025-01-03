@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: background-color 0.3s;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.nav-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-bar ul li a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+body.dark-mode .nav-bar {
+    background-color: #f5f5f5;
+}
+
+body.dark-mode .nav-bar ul li a {
+    color: #333;
+}
+
+body.dark-mode .nav-bar ul li a:hover {
+    color: #ff6f61;
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.dark-mode-toggle i {
+    color: #FFD700;
+}
+
+.dark-mode-toggle:hover {
+    transform: rotate(90deg);
+}
+
+body.dark-mode .dark-mode-toggle i.moon {
+    color: aquamarine;
+    display: none;
+}
+
+body.dark-mode .dark-mode-toggle i.sun {
+    display: inline-block;
+    color: #333;
+}
+
+body:not(.dark-mode) .dark-mode-toggle i.sun {
+    display: none;
+}
+
+body:not(.dark-mode) .dark-mode-toggle i.moon {
+    display: inline-block;
+    color: #ff6f61;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease-out;
+}
+
+.profile {
+    position: relative;
+    text-align: center;
+    background: url('bg.jpg');
+    width: 1600px;
+    height: 500px;
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile h1 {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.profile h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+}
+
+body.dark-mode .profile {
+    background: url('bgw.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+body.dark-mode .profile h1 {
+    color: black;
+}
+
+body.dark-mode .profile h3 {
+    color: black;
+}
+
+.home h1 {
+    font-size: 36px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.home:hover h1 {
+    color: #ff6f61;
+}
+
+.section {
+    margin: 80px 0;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .section {
+    background-color: #444;
+    color: #f5f5f5;
+}
+
+body.dark-mode .section h2 {
+    color: #f5f5f5;
+}
+
+body.dark-mode .section ul {
+    color: #f5f5f5;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.section p,
+.section ul {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+.skills-list {
+    padding: 20px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+#about h2, #education h2, #experience h2, #skills h2, #projects h2 {
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #ff6f61;
+    border-radius: 5px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #ff6f61;
+    border-radius: 5px;
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+#social-links ul {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 22px;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+#social-links i {
+    margin-right: 8px;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+#social-links a:hover {
+    color: #ff6f61;
+    transform: translateY(-3px);
+}
+
+#social-links a:hover i {
+    color: #ff6f61;
+}
+
+body.dark-mode #social-links a {
+    color: #f5f5f5;
+}
+
+body.dark-mode #social-links a:hover {
+    color: #ff6f61;
+}
+
+body.dark-mode #social-links i {
+    color: #f5f5f5;
+}
+
+body.dark-mode #social-links a:hover i {
+    color: #ff6f61;
+}
+
+@media (max-width: 600px) {
+    #social-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .home h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 24px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .nav-bar ul li a {
+        font-size: 16px;
+    }
+}
