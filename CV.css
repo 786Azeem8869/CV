@@ -27,6 +27,8 @@ body.dark-mode {
     padding: 20px;
 }
 
+
+
 .nav-bar {
     position: fixed;
     top: 0;
@@ -119,6 +121,9 @@ body:not(.dark-mode) .dark-mode-toggle i.moon {
     display: inline-block;
     color: #ff6f61;
 }
+
+
+
 
 .home {
     height: 100vh;
@@ -246,6 +251,33 @@ ul li {
     text-align: center;
     position: relative;
     margin-bottom: 20px;
+}
+.download-cv {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    display: block; /* Ensure the button is displayed */
+}
+
+.download-cv a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.download-cv:hover {
+    background-color: #e55b50;
+    transform: translateY(-3px);
 }
 
 
